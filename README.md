@@ -5,7 +5,7 @@ This is a simple todo app, developed using MEAN.
 ***
 ##Build
 
- Each component (Mongodb, ExpressJS, AngularClient) is deployed on a docker container. It uses docker-compose to relate the different containers. To execute the app just run:
+ Each component (Mongodb, ExpressJS, AngularClient) is deployed on a docker container. IWe use docker-compose to relate the different containers. To execute the app just run:
  
  ```
  docker-compose up --build
