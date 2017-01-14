@@ -25,6 +25,16 @@ on your terminal. As aforementioned, this app work using three different docker 
 
 ##Use
 
+
+##Technologies Used
+
+- Angular-cli
+- MongoDB
+- ExpressJS
+- Electron
+- Mongoose
+- Boostrap
+
 ***
 
 This app has been developed usign [*Create a MEAN app with Angular 2 and Docker Compose*](https://scotch.io/tutorials/create-a-mean-app-with-angular-2-and-docker-compose) tutorial by **Ganga Chris** as a template.
