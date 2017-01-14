@@ -1,0 +1,53 @@
+<!--<header>
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a [routerLink]="['']" class="navbar-brand"> Home </a>
+        </div>
+    </nav>
+</header>
+
+<div class="jumbotron">
+    <p class="text-center"><strong> Modifying User</strong></p>
+    <form #form="ngForm" (ngSubmit)="Modify()" *ngIf="active">
+        <div class="form-group" [ngClass]="{ 'has-error': DNI.invalid && DNI.touched }">
+            <strong>DNI</strong>
+            <input type="text" class="form-control" name="DNI" placeholder='DNI' required pattern="[0-9]{8}[A-Z]" minlength="9" maxlength="9"
+                [(ngModel)]="activeUser.DNI" #DNI="ngModel">
+            <span class="help-block" *ngIf="DNI.invalid && DNI.touched">DNI has to be valid</span>
+        </div>
+
+        <div class="form-group" [ngClass]="{ 'has-error': name.invalid && name.touched }">
+            <strong>Name</strong>
+            <input type="text" class="form-control" name="name" placeholder='Name' required [(ngModel)]="activeUser.name"
+                #name="ngModel">
+            <span class="help-block" *ngIf="name.invalid && name.touched">Name has to be valid.</span>
+        </div>
+
+        <div class="form-group" [ngClass]="{ 'has-error': surname.invalid && surname.touched }">
+            <strong>Surname</strong>
+            <input type="text" class="form-control" name="surname" placeholder='Surname' required [(ngModel)]="activeUser.surname"
+                #surname="ngModel">
+            <span class="help-block" *ngIf="surname.invalid && surname.touched">Surname has to be valid.</span>
+        </div>
+
+        <div class="form-group">
+            <label> Has Car</label>
+            <select class="form-control" name="Car" required [(ngModel)]="activeUser.car" #car="ngModel">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-block btn-primary" [disabled]="form.invalid" (click)="toggle = !toggle">
+              Modify User
+        </button>
+        <div style="padding-top:2%">
+            <div class="alert alert-success" *ngIf="toggle">
+                <strong>Success!</strong> You have successfully changed your user.
+            </div>
+        </div>
+    </form>
+</div>
+<footer class="text-center">
+    Manuel Rodríguez-Sánchez Guerra &copy; 2016
+</footer>-->
