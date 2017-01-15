@@ -21,24 +21,66 @@
                 </tr>
             </thead>
             <tbody *ngFor="let task of tasks">
-                <tr>
-                    <td>{{ task.priority }}</td>
-                    <td>{{ task.name }}</td>
-                    <td>{{ task.date }}</td>
-                    <td>
-                        <div *ngIf="task.completed == true">
-                            <button type="button" class="btn btn-success">Yes</button>
-                        </div>
-                        <div *ngIf="task.completed == false">
-                            <button type="button" class="btn btn-warning">No</button>
-                        </div>
+                <div *ngIf="task.priority == 1">
+                    <tr class="danger">
+                        <td>{{ task.priority }}</td>
+                        <td>{{ task.name }}</td>
+                        <td>{{ task.date }}</td>
+                        <td>
+                            <div *ngIf="task.completed == true">
+                                <button type="button" class="btn btn-success" (click)="completeTask(task, false)">Yes</button>
+                            </div>
+                            <div *ngIf="task.completed == false">
+                                <button type="button" class="btn btn-warning" (click)="completeTask(task, true)">No</button>
+                            </div>
 
-                    </td>
-                    <td> <input type="text" class="form-control" id="date" #date> </td>
-                    <td><button type="button" class="btn btn-primary btn-sm" (click)="removeTask(task)">X</button></td>
-                    <td><button type="button" class="btn btn-primary btn-sm" (click)="show(task)">Show</button></td>
-                    <td><button type="button" class="btn btn-primary btn-sm" (click)="updateTask(task, date.value)">Edit Date</button></td>
-                </tr>
+                        </td>
+                        <td> <input type="text" class="form-control" id="date" #date> </td>
+                        <td><button type="button" class="btn btn-primary btn-sm" (click)="removeTask(task)">X</button></td>
+                        <td><button type="button" class="btn btn-primary btn-sm" (click)="show(task)">Show</button></td>
+                        <td><button type="button" class="btn btn-primary btn-sm" (click)="updateTask(task, date.value)">Edit Date</button></td>
+                    </tr>
+                </div>
+                <div *ngIf="task.priority == 2">
+                    <tr class="warning">
+                        <td>{{ task.priority }}</td>
+                        <td>{{ task.name }}</td>
+                        <td>{{ task.date }}</td>
+                        <td>
+                            <div *ngIf="task.completed == true">
+                                <button type="button" class="btn btn-success" (click)="completeTask(task, false)">Yes</button>
+                            </div>
+                            <div *ngIf="task.completed == false">
+                                <button type="button" class="btn btn-warning" (click)="completeTask(task, true)">No</button>
+                            </div>
+
+                        </td>
+                        <td> <input type="text" class="form-control" id="date" #date> </td>
+                        <td><button type="button" class="btn btn-primary btn-sm" (click)="removeTask(task)">X</button></td>
+                        <td><button type="button" class="btn btn-primary btn-sm" (click)="show(task)">Show</button></td>
+                        <td><button type="button" class="btn btn-primary btn-sm" (click)="updateTask(task, date.value)">Edit Date</button></td>
+                    </tr>
+                </div>
+                <div *ngIf="task.priority == 3">
+                    <tr class="success">
+                        <td>{{ task.priority }}</td>
+                        <td>{{ task.name }}</td>
+                        <td>{{ task.date }}</td>
+                        <td>
+                            <div *ngIf="task.completed == true">
+                                <button type="button" class="btn btn-success" (click)="completeTask(task, false)">Yes</button>
+                            </div>
+                            <div *ngIf="task.completed == false">
+                                <button type="button" class="btn btn-warning" (click)="completeTask(task, true)">No</button>
+                            </div>
+
+                        </td>
+                        <td> <input type="text" class="form-control" id="date" #date> </td>
+                        <td><button type="button" class="btn btn-primary btn-sm" (click)="removeTask(task)">X</button></td>
+                        <td><button type="button" class="btn btn-primary btn-sm" (click)="show(task)">Show</button></td>
+                        <td><button type="button" class="btn btn-primary btn-sm" (click)="updateTask(task, date.value)">Edit Date</button></td>
+                    </tr>
+                </div>
             </tbody>
         </table>
     </div>
@@ -66,5 +108,5 @@
         </form>
     </div>
 <footer class="text-center">
-    Manuel Rodríguez-Sánchez Guerra &copy; 2016
+    Manuel Rodríguez-Sánchez Guerra y Luis Gonzaga Rozo Bueno &copy; 2016
 </footer>
