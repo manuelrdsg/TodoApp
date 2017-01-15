@@ -13,7 +13,7 @@ mongoose.connect(dbHost);
 const taskSchema = new mongoose.Schema({
   priority: Number,
   name: String,
-  date: String,
+  date: Date,
   completed: Boolean,
   id: Number
 });
