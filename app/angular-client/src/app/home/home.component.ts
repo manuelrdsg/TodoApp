@@ -61,6 +61,15 @@ export class HomeComponent implements OnInit {
               })
     }
 
+    completeTask(task, completed) {
+      this.http.put(`${this.API}/tasks/${task._id}`, { completed })
+        .map(res => res.json())
+          .subscribe(tasks => {
+            this.getAllTasks();
+            console.log("Oye, que funciono!");
+          })
+    }
+
     show(task) {
       console.log(task);
       console.log(task._id);
