@@ -13,9 +13,10 @@ mongoose.connect(dbHost);
 const taskSchema = new mongoose.Schema({
   priority: Number,
   name: String,
-  date: Date,
+  date: String,
   completed: Boolean,
-  id: Number
+  id: Number,
+  editing: Boolean
 });
 
 // create mongoose model
@@ -50,7 +51,8 @@ router.post('/tasks', (req, res) => {
         priority: req.body.priority,
         name: req.body.name,
         date: req.body.date,
-        completed: false
+        completed: false,
+        editing: false
     });
 
     task.save(error => {

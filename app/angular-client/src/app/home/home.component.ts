@@ -1,7 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { AppComponent } from '../app.component';
-import { User } from '../user';
-import { AboutComponent } from '../about/about.component';
 import { Http } from '@angular/http';
 
 import 'rxjs/add/operator/map';
@@ -9,12 +7,14 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styles: [`$('#sandbox-container .input-group.date').datepicker({});`]
 })
 export class HomeComponent implements OnInit {
 
-
     API = 'http://localhost:3000';
     tasks: any[]
+    dateEditing: boolean = false
+
     constructor(private http: Http) {
       http.head
     }
@@ -69,6 +69,20 @@ export class HomeComponent implements OnInit {
             console.log("Oye, que funciono!");
           })
     }
+
+    editDate(task) {
+      if(task.editing) {
+        task.editing = false;
+      } else { 
+        task.editing = true;
+      }
+    }
+
+  onBlur(task, date) {
+    this.updateTask(task, date);
+    this.editDate(task);
+  }
+
 
     show(task) {
       console.log(task);

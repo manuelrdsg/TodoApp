@@ -6,13 +6,11 @@ import { AppRouting } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +18,6 @@ import { AboutComponent } from './about/about.component';
     HttpModule,
     AppRouting
   ],
-  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
