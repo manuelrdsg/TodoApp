@@ -24,7 +24,7 @@
                     <td>
                         <span class="label label-danger" *ngIf="task.priority === 1">{{ task.priority }}</span>
                         <span class="label label-warning" *ngIf="task.priority === 2">{{ task.priority }}</span>
-                        <span class="label label-success" *ngIf="task.priority > 3">{{ task.priority }}</span>
+                        <span class="label label-success" *ngIf="task.priority >= 3">{{ task.priority }}</span>
                     </td>
                     <td>{{ task.name }}</td>
                     <td>{{ task.date }}</td>
